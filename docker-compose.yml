@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+ environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  php:
+    image: php:apache
+    container_name: php-container
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - mysql
+    ports:
+      - "80:80"
+
+volumes:
+  mysql-data:
