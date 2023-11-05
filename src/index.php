@@ -26,6 +26,15 @@
     var_dump($i);
     echo "<br>";
 
+    echo '$i';
+
+    echo "<br>";
+    // unset($i);
+    $i = "日本語";
+    var_dump($i);
+    echo "<br>";
+
+    echo "<hr>";
     ?>
     <!-- 関数 -->
     <?php
