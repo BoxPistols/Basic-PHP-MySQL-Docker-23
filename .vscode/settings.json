@@ -4,5 +4,7 @@
     "activityBar.background": "#3D282C",
     "titleBar.activeBackground": "#55383E",
     "titleBar.activeForeground": "#FCFAFA"
-  }
+  },
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "editor.experimentalWhitespaceRendering": "svg"
 }

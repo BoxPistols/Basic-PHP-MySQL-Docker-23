@@ -1,0 +1,41 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.85;
+  padding: 1vh 6vw;
+  color: #345;
+  font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0 0.75em 0;
+  font-weight: 700;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  width: 86%;
+  display: block;
+  margin: 2vh auto;
+  opacity: 0.3;
+}
