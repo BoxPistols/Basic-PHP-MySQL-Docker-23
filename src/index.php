@@ -30,7 +30,7 @@
 
     echo "<br>";
     // unset($i);
-    $i = "日本語";
+    $i = "日本語?";
     var_dump($i);
     echo "<br>";
 

@@ -1,10 +1,19 @@
 {
   "nuxt.isNuxtApp": false,
   "workbench.colorCustomizations": {
-    "activityBar.background": "#3D282C",
-    "titleBar.activeBackground": "#55383E",
+    "activityBar.background": "#b5bdc2",
+    "titleBar.activeBackground": "#5695be",
     "titleBar.activeForeground": "#FCFAFA"
   },
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-  "editor.experimentalWhitespaceRendering": "svg"
+  "editor.experimentalWhitespaceRendering": "svg",
+  // Mainly for static files
+  "liveServer.settings.useWebExt": true,
+  // This means that you change your real URL (current PHP url)
+  // to another URL (which Live Sever starts).
+  "liveServer.settings.proxy": {
+    "enable": true, //   i. enabled
+    "baseUri": "/", //  ii. workspace
+    "proxyUri": "http://localhost:80/workspace" // iii. actual address
+  }
 }
