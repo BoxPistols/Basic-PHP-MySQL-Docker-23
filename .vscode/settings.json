@@ -1,8 +1,8 @@
 {
   "nuxt.isNuxtApp": false,
   "workbench.colorCustomizations": {
-    "activityBar.background": "#b5bdc2",
-    "titleBar.activeBackground": "#5695be",
+    "activityBar.background": "#243c3f",
+    "titleBar.activeBackground": "#31737c",
     "titleBar.activeForeground": "#FCFAFA"
   },
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
