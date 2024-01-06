@@ -9,7 +9,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.85;
-  padding: 1vh 6vw;
+  padding: 1vh 4vw;
   color: #345;
   font-size: 1.2rem;
 }
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1em 0 0.75em 0;
+  margin: 1em 0 0.5em 0;
   font-weight: 700;
 }
 
@@ -38,4 +38,9 @@ hr {
   display: block;
   margin: 2vh auto;
   opacity: 0.3;
+}
+
+ul {
+  display: flex;
+  gap: .5em;
 }
