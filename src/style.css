@@ -17,7 +17,7 @@ body {
   padding: 1vh 6vw;
   font-size: 1.2rem;
   background: var(--background);
-  
+  color: var(--text);
 }
 
 h1,
@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1em 0 0.75em 0;
+  margin: 1em 0 0.5em 0;
   font-weight: 700;
 }
 
@@ -44,4 +44,11 @@ hr {
   display: block;
   margin: 2vh auto;
   opacity: 0.3;
+  <<<<<<< HEAD=======
+}
+
+ul {
+  display: flex;
+  gap: .5em;
+  >>>>>>>b4afbfca1fa99d4c1957ca25feb27033b5c53b41
 }
