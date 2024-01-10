@@ -1,32 +1,3 @@
-version: '3.1'
-
-services:
-  mysql:
-    image: mysql:latest
-    container_name: mysql-container
-  environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-  ports:
-    - "3306:3306"
-  volumes:
-    - mysql-data:/var/lib/mysql
-
-  php:
-    image: php:apache
-    container_name: php-container
-    volumes:
-      - ./src:/var/www/html
-    depends_on:
-      - mysql
-    ports:
-      - "80:80"
-
-volumes:
-  mysql-data:
-
 # この docker-compose.yml ファイルは、Docker Composeを使用して2つのサービス、すなわち mysql と php を定義しています。
 
 # mysql:latest イメージを使用します。
@@ -42,3 +13,50 @@ volumes:
 # mysql サービスに依存しています。これは、mysql サービスが php サービスより先に起動することを意味します。
 # ポート80を開放し、ホストとコンテナの間でマッピングします。
 # 最後に、mysql-data ボリュームを定義しています。これは、上記の mysql サービスで使用されます。
+
+version: '3.1' # docker-compose.yml のバージョンを指定します。
+
+services:
+  # サービスを定義します。
+  mysql:
+    # mysql サービスを定義します。
+    image: mysql:latest # mysql:5.7 でも可
+    container_name: mysql-container # コンテナの名前を指定します。
+    environment:
+      # 環境変数を指定します。
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} # MySQLのrootパスワードを指定します。
+      - MYSQL_DATABASE=${MYSQL_DATABASE} # データベース名を指定します。
+      - MYSQL_USER=${MYSQL_USER} # ユーザー名を指定します。
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD} # ユーザーパスワードを指定します。
+    ports:
+      # ポートを指定します。
+      - "3306:3306" # ホストとコンテナの間でマッピングします。 左がホスト側、右がコンテナ側のポート番号です。
+    volumes:
+      # ボリュームを指定します。
+      - mysql-data:/var/lib/mysql # ボリューム mysql-data を /var/lib/mysql にマウントします。　
+
+  php:
+    # php サービスを定義します。
+    image: php:apache # php:7.2-apache でも可
+    container_name: php-container # コンテナの名前を指定します。
+    volumes:
+      # ボリュームを指定します。
+      - ./src:/var/www/html # ローカルの ./src ディレクトリをコンテナの /var/www/html にマウントします。
+    depends_on:
+      # 依存関係を指定します。
+      - mysql # mysql サービスに依存しています。
+    ports:
+      # ポートを指定します。
+      - "8888:80" # ホストとコンテナの間でマッピングします。 左がホスト側、右がコンテナ側のポート番号です。
+
+volumes:
+  # ボリュームを定義します。
+  mysql-data:
+    # mysql-data ボリュームを定義します。
+
+    # この docker-compose.yml ファイルを使用して、Docker Composeを実行します。
+    # このファイルがあるディレクトリで、次のコマンドを実行します。
+    # docker-compose up -d
+    # これにより、docker-compose.yml ファイルで定義されたサービスが起動します。
+    # この例では、mysql サービスが php サービスより先に起動することを意味します。
+    # これは、mysql サービスが php サービスに依存しているためです。

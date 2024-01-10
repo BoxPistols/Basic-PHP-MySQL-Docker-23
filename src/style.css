@@ -5,13 +5,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background: #333;
+  --text: #fff;
+}
+
 /* Base */
 body {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.85;
   padding: 1vh 6vw;
-  color: #345;
   font-size: 1.2rem;
+  background: var(--background);
+  
 }
 
 h1,

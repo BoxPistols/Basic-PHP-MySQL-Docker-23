@@ -13,7 +13,7 @@
     <?php echo "Hello!" . "<br>"; ?>
 
     <?php
-    $i = 1;
+    $i = 100;
 
     var_dump($i);
     echo "<br>";
