@@ -40,9 +40,7 @@ echo "<br>";
 
 $i++;
 var_dump($i);
-echo "<br>";
-
-echo '$i';
+echo "<br>"; echo '$i';
 
 echo "<br>";
 // unset($i);
