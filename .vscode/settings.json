@@ -17,7 +17,6 @@
     "baseUri": "/", //  ii. workspace
     "proxyUri": "http://localhost:80/workspace" // iii. actual address
   },
-  "phpfmt.indent_with_space": 2,
-  "indentRainbow.colorOnWhiteSpaceOnly": true
+  "phpfmt.indent_with_space": 2, "indentRainbow.colorOnWhiteSpaceOnly": true
 }
 
